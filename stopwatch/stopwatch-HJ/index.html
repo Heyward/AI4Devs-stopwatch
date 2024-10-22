@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch and Countdown</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <!-- Welcome Screen -->
+  <div id="welcomeScreen" class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-4xl mb-10">Choose a Functionality</h1>
+    <div class="flex space-x-10">
+      <button id="stopwatchBtn" class="bg-green-500 text-white font-bold py-4 px-8 rounded-lg text-2xl">Stopwatch</button>
+      <button id="countdownBtn" class="bg-red-500 text-white font-bold py-4 px-8 rounded-lg text-2xl">Countdown</button>
+    </div>
+  </div>
+
+  <!-- Stopwatch Screen -->
+  <div id="stopwatchScreen" class="hidden flex flex-col items-center justify-center h-screen">
+    <div class="text-6xl font-mono mb-10" id="stopwatchDisplay">00:00:00</div>
+    <div class="flex space-x-5">
+      <button id="startStopBtn" class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-2xl">Start</button>
+      <button id="clearStopwatchBtn" class="bg-red-500 text-white font-bold py-2 px-6 rounded-lg text-2xl">Clear</button>
+    </div>
+    <button id="backFromStopwatch" class="mt-10 text-blue-500 underline">Back</button>
+  </div>
+
+  <!-- Countdown Screen -->
+  <div id="countdownScreen" class="hidden flex flex-col items-center justify-center h-screen">
+    <div class="text-6xl font-mono mb-10" id="countdownDisplay">00:00:00</div>
+    <div class="grid grid-cols-3 gap-5 mb-5">
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="0">0</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="1">1</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="2">2</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="3">3</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="4">4</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="5">5</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="6">6</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="7">7</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="8">8</button>
+      <button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-xl" data-value="9">9</button>
+    </div>
+    <div class="flex space-x-5">
+      <button id="setCountdownBtn" class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-2xl">Set</button>
+      <button id="startCountdownBtn" class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg text-2xl hidden">Start</button>
+      <button id="clearCountdownBtn" class="bg-red-500 text-white font-bold py-2 px-6 rounded-lg text-2xl hidden">Clear</button>
+    </div>
+    <button id="backFromCountdown" class="mt-10 text-blue-500 underline">Back</button>
+  </div>
+</body>
+</html>
+
